@@ -1,10 +1,7 @@
-CREATE DATABASE todo;
+DROP TABLE IF EXISTS task;
 
-CREATE TABLE todo.task ( 
-  id INT PRIMARY KEY NOT NULL AUTO_INCREMENT ,
-  t_name VARCHAR(20) NOT NULL ,
-  t_description VARCHAR(200) NOT NULL ,
-  t_date DATE NOT NULL ,
-  t_priority INT NOT NULL);
-
-
+CREATE TABLE task(
+task_id int not null primary key Auto_increment,
+  task_name varchar(20) not null,
+  task_description varchar(20) 
+);
