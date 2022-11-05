@@ -56,8 +56,9 @@ if(isset($_POST['saved'])){
       <div class="container">
         
         <div class="form-floating mb-3">
-          <input type="text" class="form-control" name="tName" id="taskName" placeholder="Task Name">
-          <label for="taskName">Assignment 1</label>
+          <h1>Assignment 1</h1>
+          <!-- <input type="text" class="form-control" name="tName" id="taskName" placeholder="Task Name">
+          <label for="taskName">Assignment 1</label> -->
         </div>
         
         <div class="input-group mb-3 col-4">
@@ -96,8 +97,9 @@ if(isset($_POST['saved'])){
       <div class="container">
 
         <div class="form-floating mb-3">
-          <input type="text" class="form-control" name="tName" id="taskName" placeholder="Task Name">
-          <label for="taskName">Assignment 2</label>
+        <h1>Assignment 2</h1>
+          <!-- <input type="text" class="form-control" name="tName" id="taskName" placeholder="Task Name">
+          <label for="taskName">Assignment 2</label> -->
         </div>
         
         <div class="input-group mb-3 col-4">
@@ -136,8 +138,9 @@ if(isset($_POST['saved'])){
       <div class="container">
 
         <div class="form-floating mb-3">
-          <input type="text" class="form-control" name="tName" id="taskName" placeholder="Task Name">
-          <label for="taskName">Assignment 3</label>
+        <h1>Assignment 3</h1>
+          <!-- <input type="text" class="form-control" name="tName" id="taskName" placeholder="Task Name">
+          <label for="taskName">Assignment 3</label> -->
         </div>
         
         <div class="input-group mb-3 col-4">
