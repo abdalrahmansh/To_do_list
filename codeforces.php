@@ -1,3 +1,21 @@
+<?php
+  $conn = mysqli_connect('localhost','root','','todo');
+
+if(isset($_POST['saved'])){ 
+    $task_name = $_POST['task_name'];
+    $task_description = $_POST['task_description'];
+    $sql = "INSERT INTO task (task_name,task_description) VALUES('$task_name','$task_description')";
+    
+    if(empty($_POST['task_name'])){
+      echo '<div class="alert alert-danger" role="alert">Task name is empty!</div>';
+    }else
+      if(mysqli_query($conn, $sql)){
+            echo '<div class=" alert alert-success" role="alert">Success!</div>';
+            header('location','index.php');  
+      }else
+          echo 'ERROR : ' . mysqli_error($conn);
+  }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,19 +33,21 @@
       <form action="index.php" method="POST">
 
       <div class="form-floating mb-3">
-        <input type="text" name="Assignment1" class="form-control" name="tName" id="taskName" placeholder="Task Name">
-        <label for="taskName">Assignment 1</label>
+        <input type="text" name="task_description1" class="form-control" id="task_description1" placeholder="user Name">
+        <label for="task_description1">You are :</label>
       </div>
 
       <div class="form-floating mb-3">
-        <input type="text" name="Assignment2" class="form-control" name="tName" id="taskName" placeholder="Task Name">
-        <label for="taskName">Assignment 2</label>
+        <input type="text" name="task_name1" class="form-control"  id="task_name1" placeholder="Assignment Name">
+        <label for="task_name1">Assignment Link </label>
       </div>
+      <button type="submit" name="saved" class="btn btn-primary">Save</button>
 
-      <div class="form-floating mb-3">
+
+      <!-- <div class="form-floating mb-3">
         <input type="text" name="Assignment3" class="form-control" name="tName" id="taskName" placeholder="Task Name">
         <label for="taskName">Assignment 3</label>
-      </div>
+      </div> -->
   </div>
 
 

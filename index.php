@@ -1,10 +1,11 @@
 
 <?php 
-  include './connect/connect.php';
+  // include './connect/connect.php';
   // include './form/form.php';
   // include './newtask/newtask.php';
   // unset($_POST);
 
+  $conn = mysqli_connect('localhost','root','','todo');
   //add a task
   if(isset($_POST['saving'])){ 
     $task_name = $_POST['task_name'];
@@ -46,8 +47,8 @@
 </head>
 <body>
 
-<a class="btn btn-primary " href="/codeforces.php" role="button">Code forces task</a>
-<a class="btn btn-primary" href="/newtask.php" role="button">New task</a>
+<a class="btn b btn-primary " href="/codeforces.php" role="button">Code forces task</a>
+<a class="btn b btn-primary" href="/newtask.php" role="button">New task</a>
   <div class="container">
     <table class="table table-striped ">
       <thead>
@@ -68,8 +69,8 @@
         <th scope='row'><?php echo $row["task_id"]?></th>
           <td> <?php echo $row["task_name"]?></td>
           <td><?php echo $row["task_description"]?></td>
-          <td><a href='./index.php' type='button' class='btn btn-primary'>Edit</a>
-          <a href="index.php?idd=<?php echo $row["task_id"]?>" type='button' class='btn btn-danger'>Delete</a></td>
+          <!-- <a href='./index.php' type='button' class='btn btn-primary'>Edit</a> -->
+          <td><a href="index.php?idd=<?php echo $row["task_id"]?>" type='button' class='btn btn-danger'>Delete</a></td>
         </tr>
         <?php
         } 

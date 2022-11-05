@@ -1,3 +1,28 @@
+<?php
+ // include './connect/connect.php';
+  // include './form/form.php';
+  // include './newtask/newtask.php';
+  // unset($_POST);
+
+  $conn = mysqli_connect('localhost','root','','todo');
+  //add a task
+  if(isset($_POST['saving'])){ 
+    $task_name = $_POST['task_name'];
+    $task_description = $_POST['task_description'];
+    $sql = "INSERT INTO task (task_name,task_description) VALUES('$task_name','$task_description')";
+    
+    if(empty($_POST['task_name'])){
+      echo '<div class="alert alert-danger" role="alert">Task name is empty!</div>';
+    }else
+      if(mysqli_query($conn, $sql)){
+            echo '<div class=" alert alert-success" role="alert">Success!</div>';
+            header('location','index.php');  
+      }else
+          echo 'ERROR : ' . mysqli_error($conn);
+  }
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,7 +39,7 @@
 <body>
 <div class="form container">
     <form action="index.php" method="POST">
-
+    <h1>New Task</h1>
     <div class="form-floating mb-3">
       <input type="text" class="form-control" name="task_name" id="taskName" placeholder="Task Name">
       <label for="taskName">Task Name</label>
