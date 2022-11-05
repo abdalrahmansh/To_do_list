@@ -56,7 +56,7 @@ if(isset($_POST['saved'])){
       <div class="container">
         
         <div class="form-floating mb-3">
-          <h1>Assignment 1</h1>
+          <h3>Assignment 1</h3>
           <!-- <input type="text" class="form-control" name="tName" id="taskName" placeholder="Task Name">
           <label for="taskName">Assignment 1</label> -->
         </div>
@@ -97,7 +97,7 @@ if(isset($_POST['saved'])){
       <div class="container">
 
         <div class="form-floating mb-3">
-        <h1>Assignment 2</h1>
+        <h3>Assignment 2</h3>
           <!-- <input type="text" class="form-control" name="tName" id="taskName" placeholder="Task Name">
           <label for="taskName">Assignment 2</label> -->
         </div>
@@ -138,7 +138,7 @@ if(isset($_POST['saved'])){
       <div class="container">
 
         <div class="form-floating mb-3">
-        <h1>Assignment 3</h1>
+        <h3>Assignment 3</h3>
           <!-- <input type="text" class="form-control" name="tName" id="taskName" placeholder="Task Name">
           <label for="taskName">Assignment 3</label> -->
         </div>
